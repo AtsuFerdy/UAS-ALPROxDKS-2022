@@ -182,7 +182,7 @@ def enkripsi():
     elif kunci == '':
         messagebox.showerror(title='Pemberitahuan!', message='Harap Lengkapi!')
     else:
-        file = open(f"{nama_file}.txt").read().lower()
+        file = open(f"{nama_file}.txt").read().lower().replace('\n','')
         teks = ""
         for i in range(len(file)):
             if file[i].islower():
@@ -213,7 +213,7 @@ def dekripsi():
     elif kunci == '':
         messagebox.showerror(title='Pemberitahuan!', message='Harap Lengkapi!')
     else:
-        file = open(f"{nama_file}.txt").read().lower()
+        file = open(f"{nama_file}.txt").read().lower().replace('\n','')
         teks = ""
         for i in range(len(file)):
             if file[i].islower():
